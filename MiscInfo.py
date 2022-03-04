@@ -14,6 +14,9 @@
 # https://learn.g2.com/cross-validation
 # https://courses.cs.washington.edu/courses/cse163/software/
 
+# EXAMPLE OF CLUSTERING ML
+# https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_plusplus.html#sphx-glr-auto-examples-cluster-plot-kmeans-plusplus-py
+
 
 # DATA VIS WE CAN CREATE:
 #  Which occupations result in the largest pay gap between men and women?
