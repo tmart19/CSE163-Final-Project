@@ -1,2 +1,2 @@
 def foo():
-    print('Foo runs')
+    print('Foo runs wtf')

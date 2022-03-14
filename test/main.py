@@ -10,6 +10,8 @@ import skimage
 
 from my_file import foo
 
+from ml import ML
+
 EXPECTED_MAJOR = 3
 EXPECTED_MINOR = 8
 
@@ -17,6 +19,8 @@ EXPECTED_MINOR = 8
 def main():
     print('Main runs')
     foo()
+    get_one_var_regressor()
+
 
     version = sys.version_info
     if version.major != EXPECTED_MAJOR or version.minor != EXPECTED_MINOR:
