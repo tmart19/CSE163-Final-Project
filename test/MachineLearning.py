@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+import math
 
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import cross_val_score
@@ -14,10 +16,15 @@ def gender_pay_decision_tree(data):
     features = income_data[['sex']]
     labels = income_data['annlabinc']
 
+    # find the difference between each row and std
+    # maybe take absolute value
+    # labels_sd = labels - labels.std()
+    # print(labels_sd)
+
     model = DecisionTreeRegressor()
     standard_deviation = get_cv(model, features, labels)
     print('Standard deviation of predicted income to actual income using \
-          gender data - DecisionTreeRegressor:', standard_deviation)
+    gender data - DecisionTreeRegressor:', standard_deviation)
 
 
 def gender_pay_random_forest(data):
@@ -59,5 +66,9 @@ def get_cv(model, features, labels):
     cv_score = cross_val_score(model, features, labels,
                                scoring='neg_mean_squared_error', cv=5)
     cv_score = cv_score * -1
-    standard_deviation = cv_score.sum() / len(cv_score)
-    return standard_deviation
+    sqrt_vals = []
+    for value in cv_score:
+        print(value)
+        # mean_error = math.sqrt(value)
+        # sqrt_vals.append(mean_error)
+    return sqrt_vals

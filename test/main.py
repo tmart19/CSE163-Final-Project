@@ -15,9 +15,6 @@ from MachineLearning import racial_minority_pay_decision_tree
 from MachineLearning import racial_minority_pay_random_forest
 
 
-# EXPECTED_MAJOR = 3
-# EXPECTED_MINOR = 8
-
 INCOME_DATA = './datasets/PanelStudyIncomeDynamics.csv'
 
 
