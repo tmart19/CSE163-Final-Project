@@ -1,34 +1,36 @@
 import sys
 
 import geopandas
-import numpy
-import pandas
+import numpy as np
+import pandas as pd
 import requests
 import seaborn
 import sklearn
 import skimage
 
-from my_file import foo
 
-from ml import ML
+from MachineLearning import gender_pay_decision_tree
+from MachineLearning import gender_pay_random_forest
+from MachineLearning import racial_minority_pay_decision_tree
+from MachineLearning import racial_minority_pay_random_forest
 
-EXPECTED_MAJOR = 3
-EXPECTED_MINOR = 8
+
+# EXPECTED_MAJOR = 3
+# EXPECTED_MINOR = 8
+
+INCOME_DATA = './datasets/PanelStudyIncomeDynamics.csv'
+
+
+def ml_methods(data):
+    gender_pay_decision_tree(data)
+    gender_pay_random_forest(data)
+    racial_minority_pay_decision_tree(data)
+    racial_minority_pay_random_forest(data)
 
 
 def main():
-    print('Main runs')
-    foo()
-    get_one_var_regressor()
-
-
-    version = sys.version_info
-    if version.major != EXPECTED_MAJOR or version.minor != EXPECTED_MINOR:
-        print('⚠️  Warning! Detected Python version '
-              f'{version.major}.{version.minor} but expected version '
-              f'{EXPECTED_MAJOR}.{EXPECTED_MINOR}')
+    ml_methods(INCOME_DATA)
 
 
 if __name__ == '__main__':
     main()
-
