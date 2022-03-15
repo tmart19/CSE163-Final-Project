@@ -1,5 +1,7 @@
 import pandas as pd
 import altair as alt
+import altair_viewer as av
+alt.renderers.enable('mimetype')
 
 # Research Question #1: Is there a gender pay gap?
 
@@ -8,17 +10,16 @@ def gender_base_pay_bar(gp):
     """
     Produces a bar chart comparing base pay and gender.
     """
-    gender_base_pay = alt.Chart(gp, title="Base Pay Per Gender").mark_bar(
-        color='steelblue'
-    ).encode(
-        x=alt.X('Gender', axis=alt.Axis(title='Gender (Male or Female)')),
-        y=alt.Y('BasePay', axis=alt.Axis(title='Base Pay (in USD)'))
-    ).properties(
-        width=400, height=600
-    )
+    alt.renderers.enable('mimetype')
+    gender_base_pay = alt.Chart(gp, title="Base Pay Per Gender").mark_bar(color='steelblue'
+        ).encode(
+            x=alt.X('Gender', axis=alt.Axis(title='Gender (Male or Female)')),
+            y=alt.Y('BasePay', axis=alt.Axis(title='Base Pay (in USD)'))
+        ).properties(
+            width=400, height=600   
+        )
     gender_base_pay = gender_base_pay.configure_title(fontSize=28)
-    # gender_base_pay.save('BasePayGender.png')
-
+    gender_base_pay
 
 def gender_annual_income_pie(df):
     """

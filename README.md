@@ -12,13 +12,14 @@ Instructions to how to run the code in our project are as follows. The repositor
         2. How does the gender pay gap differ across degree levels achieved for each gender?
         3. Which occupations result in the largest pay gap between men and women? 
         4. How do attributes other than gender (such as race, ethnicity, socio-economic status) contribute to the pay gap? If so, what combination of attributes result in the largest disparity?
-    --to run the code in this file follow the steps:
-        1. Run the first import lines to load in libraries altair and pandas. 
-        2. Clicking on 'run' will run the main method pattern and make corresponding calls to the functions written to produce each plot. 
-        3. The plots will generate in a separate html window of your default browser. 
-        4. Ensure that the repository has been cloned on your local device in to gain access to the data and the needed information for the project. 
 
     --_DataVizPlayground.ipynb_ is a Jupyter notebook that was used to test the code and produce plots quickly, before tranferring it to run our actual Python module. The code in this Jupyter Notebook was for experemental and testing purposes only.
+    --to run the code in this file follow the steps:
+        1. Run the first cell that contains import lines to load in libraries altair and pandas. 
+        2. Clicking on 'run' will run the cell and make corresponding calls to the functions written to produce each plot. 
+        3. In order to see the visualization of the plots, the plots will generate in a their own respective cells.
+        4. Click on each cell to see how the plots render.
+        4. Ensure that the repository has been cloned on your local device in to gain access to the data and the needed information for the project. 
 
 2. **ml_code-a directory that contains the code to produce machine learning algorithms that were performed for our project.**
 
