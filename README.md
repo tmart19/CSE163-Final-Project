@@ -23,7 +23,10 @@ Instructions to how to run the code in our project are as follows. The repositor
 
 2. **ml_code-a directory that contains the code to produce machine learning algorithms that were performed for our project.**
 
-    _MachineLearning.py_ is a Python module that has the code to produce our machine learning model. 
+    --_MachineLearning.py_ is a Python module that has the code to produce our machine learning models. The _main.py_ file is used to execute this code and includes the necessary imports and method calls within it. Once the main method is run, the methods will print the results found from each inquiry. The inquires are used to answer the following questions:
+        1. Is there a gender pay gap?
+        2. How does the gender pay gap differ across degree levels achieved for each gender?
+        3. How do attributes other than gender (such as race, ethnicity, socio-economic status) contribute to the pay gap? If so, what combination of attributes result in the largest disparity?
 
 3. **datasets-a directory that contains the datasets that were used in our poejct and analysis.**
 
