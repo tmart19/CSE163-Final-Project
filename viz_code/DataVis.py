@@ -54,7 +54,6 @@ def gender_bonus_pay_bar(gp):
         title="Bonus Amount per Gender"
     )
     gender_bonus_amount = gender_bonus_amount.configure_title(fontSize=28)
-    # gender_bonus_amount.save('BonusPayGender.png')
 
 
 # Research Question #2: How does the gender pay gap differ across degree
@@ -62,7 +61,7 @@ def gender_bonus_pay_bar(gp):
 def ann_income_degree_bar(df):
     """
     Produces a bar chart comparing annual income and degree obtained,
-     grouped by gender.
+    grouped by gender.
     """
     gender_ann_income_degree = alt.Chart(
         df, title="Annual Income by Sex and Degree Obtained"
@@ -133,7 +132,8 @@ def job_dept_gender_bar(gp):
         title="Base Pay by Job Department and Sex").mark_bar().encode(
         x=alt.X('Dept', axis=alt.Axis(title='Department')),
         y=alt.Y('BasePay:Q', axis=alt.Axis(title='Annual Income in USD')),
-        color=alt.Color('Gender', legend=alt.Legend(title="Sex by Color"), scale=alt.Scale(scheme='darkmulti')),
+        color=alt.Color('Gender', legend=alt.Legend(title="Sex by Color"), 
+        scale=alt.Scale(scheme='darkmulti')),
         column=alt.Column('Gender', title="Gender"),
     ).properties(
         width=200,
